@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hawthorne Media Labs: Home</title>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel=stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="Navbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link active" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Connect</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Model</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Experiment</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Visualize</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Optimize</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Document</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="jumbotron">
+    <div class="container">
+        <div class="row rowheader">
+            <div class="media">
+                <a href="/" border="0"><img src="images/HDILogoSmall.png" border="0" class="align-bottom"></a>
+                <div class="media-body col-4">
+                    <H1 class="header-text">Hawthorne&nbsp;Media&nbsp;Labs</H1>
+                </div>
+                <div class="col-5"></div>
+            </div>
+            <div class="col-3">
+                <span class="fa fa-user fa-lg"></span> Stephen Kelley<br>
+                Role: Data Scientist<br>
+                Dataset: ClientA Q1
+            </div>
+        </div>
+        <div class="row rowheader">
+            <div class="col-12">
+                <span class="fa fa-home fa-lg"></span> <span class="fa fa-angle-right fa-lg"></span> experiment <span class="fa fa-angle-right fa-lg"></span> baseline attribution <span class="fa fa-angle-right fa-lg"></span> create
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container-fluid">
+    <div class="row row-content">
+        <div class="col-12">
+            <h2>Create Baseline Attribution</h2>
+            <div id = 'form' class="formBorder">
+                <form method="post">
+                    <div class="row" style="border:1px solid black; float: left">
+                        <div class="col-6" style="border:1px solid black;">
+                            <table style="margin: 10px;">
+                                <tr><th data-toggle="tooltip" title="dataset containing data to attribute">Dataset:</th><td><select name='DatasetSelect' id='DatasetSelect'><option value='26' selected>Client A Q1</option><option value='33' >Client B: Q2</option></select></td></tr>
+                                <tr>
+                                    <th data-toggle="tooltip" title="kpi to be attributed"><label for="id_kpi">Kpi:</label></th>
+                                    <td><select name="kpi" id="id_kpi">
+                                        <option value="visits">visits</option>
+                                        <option value="kpi1">kpi1</option>
+                                        <option value="kpi2">kpi2</option>
+                                        <option value="kpi3">kpi3</option>
+                                        <option value="kpi4">kpi4</option>
+                                        <option value="kpi5">kpi5</option>
+                                        <option value="kpi6">kpi6</option>
+                                        <option value="kpi7">kpi7</option>
+                                        <option value="kpi8">kpi8</option>
+                                        <option value="kpi9">kpi9</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                    <th data-toggle="tooltip" title="airing metric used to divide attribution for overlapping spots"><label for="id_metric">Metric:</label></th>
+                                    <td><select name="metric" id="id_metric">
+                                        <option value="costWeight">costWeight</option>
+                                        <option value="clientCostWeight">clientCostWeight</option>
+
+                                        <option value="ratingWeight">ratingWeight</option>
+
+                                        <option value="impressionsWeight">impressionsWeight</option>
+
+                                        <option value="performance1Weight">performance1Weight</option>
+
+                                        <option value="performance2Weight">performance2Weight</option>
+
+                                        <option value="spotsWeight">spotsWeight</option>
+
+                                    </select></td>
+                                </tr>
+
+                                <tr>
+                                    <th data-toggle="tooltip" title="model to determine baseline"><label for="id_baseline">Baseline:</label></th>
+                                    <td><select name="baseline" id="id_baseline">
+                                        <option value="production baseline">production baseline</option>
+
+                                    </select></td>
+                                </tr>
+
+                                <tr>
+                                    <th data-toggle="tooltip" title="number of minutes after airing to include in attribution"><label for="id_width">Width:</label></th>
+                                    <td><input type="number" name="width" value="5" min="3" max="7" required id="id_width"></td>
+                                </tr>
+
+                                <tr>
+                                    <th data-toggle="tooltip" title="minutes on each side to consider in taking percentile in next parameter for baseline value"><label for="id_percentilewidth">Percentilewidth:</label></th>
+                                    <td><input type="number" name="percentilewidth" value="30" min="0" max="120" required id="id_percentilewidth"></td>
+                                </tr>
+
+                                <tr>
+                                    <th data-toggle="tooltip" title="percentile of kpi over width to use for baseline value"><label for="id_cutpercentile">Cutpercentile:</label></th>
+                                    <td><input type="number" name="cutpercentile" value="10" min="0" max="99" required id="id_cutpercentile"></td>
+                                </tr>
+
+                                <tr>
+                                    <th data-toggle="tooltip" title="constant kpi value to add to baseline at each minute: positive decreases amount of kpi attributed and increases CP"><label for="id_offset">Offset:</label></th>
+                                    <td><input type="text" name="offset" value="0.0" required id="id_offset"></td>
+                                </tr>
+
+                                <tr>
+                                    <th data-toggle="tooltip" title="dynamically determine offset that gives specified client cost per KPI"><label for="id_fitOffset">Fitoffset:</label></th>
+                                    <td><input type="checkbox" name="fitOffset" onchange="fitOffsetClick();" id="id_fitOffset"></td>
+                                </tr>
+
+                                <tr>
+                                    <th data-toggle="tooltip" title="client cost per KPI for attribution to achieve by fitting offset"><label for="id_clientCostPerKPIToFit">Clientcostperkpitofit:</label></th>
+                                    <td><input type="number" name="clientCostPerKPIToFit" value="50.0" step="any" required id="id_clientCostPerKPIToFit"></td>
+                                </tr>
+
+                                <tr>
+                                    <th data-toggle="tooltip" title="set any negative baseline values to zero: these could result from adding negative offset to baseline"><label for="id_removeSubtractedNegatives">Removesubtractednegatives:</label></th>
+                                    <td><input type="checkbox" name="removeSubtractedNegatives" id="id_removeSubtractedNegatives" checked></td>
+                                </tr>
+
+                                <tr>
+                                    <th data-toggle="tooltip" title="set any negatives in baseline subtracted time series to zero"><label for="id_removeBaselineNegatives">Removebaselinenegatives:</label></th>
+                                    <td><input type="checkbox" name="removeBaselineNegatives" id="id_removeBaselineNegatives" checked></td>
+                                </tr>
+
+                                <tr>
+                                    <th data-toggle="tooltip" title="filters to apply to data before any of the attribution processing including baseline determination"><label>Filters:</label></th>
+                                    <td><ul id="id_filters">
+                                    </ul></td>
+                                </tr>
+
+                            </table>
+                            <br/>
+                            <input type="submit" value="Submit" name="btnAddBaseline" />
+                        </div>
+                        <div class="col-6" style="border:1px solid black;">
+                            Here is where a really long description of the model and how it works. It will mention the inputs but direct the user to
+                            hover over them in the form to see the tooltips that describe in detail each input in the form. The description will
+                            very likely include some diagrams.
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <hr>
+    <div class="row justify-content-center">
+        <p>Copyright Hawthorne 2018&nbsp;&nbsp;System: Production</p>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

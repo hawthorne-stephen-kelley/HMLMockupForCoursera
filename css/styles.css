@@ -1,0 +1,40 @@
+/*.header {background-color: black; align:top; height:100px}*/
+/*.header-text {color: floralwhite; font-size: 58px; padding-top: 10px; padding-bottom:21px}*/
+/*.error {color: red;font-weight: bold }*/
+/*.formBorder {border-size:10px; border-style: groove;border-color: black; padding: 10px; display: inline-block }*/
+/*.errorlist {color:red}*/
+/*.menu-table { border-spacing: 30px; border-collapse: separate; margin-left:auto;margin-right:auto;}*/
+/*.footer {background-color: black; color:floralwhite;}*/
+
+.row-header {
+    margin: 0px auto;
+    padding: 0px auto;
+}
+.row-content {
+    margin: 0px auto;
+}
+.footer {
+    background-color: black;
+    margin: 0px auto;
+    color:floralwhite;
+}
+.jumbotron {
+    background: black;
+    align: top;
+    color: floralwhite;
+    height: 200px
+}
+.address {
+    font-size: 80%;
+    margin: 0px;
+    color: #0f0f0f;
+}
+body{
+    z-index: 0;
+}
+.navbar-dark {
+    background-color: black;
+    color:floralwhite;
+}
+
+.header-text {color: floralwhite; font-size: 58px; padding-top: 10px; padding-bottom:21px}

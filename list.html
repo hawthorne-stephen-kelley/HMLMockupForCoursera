@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hawthorne Media Labs: Home</title>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel=stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="Navbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link active" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Connect</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Model</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Experiment</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Visualize</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Optimize</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Document</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="jumbotron">
+    <div class="container">
+        <div class="row rowheader">
+            <div class="media">
+                <a href="/" border="0"><img src="images/HDILogoSmall.png" border="0" class="align-bottom"></a>
+                <div class="media-body col-4">
+                    <H1 class="header-text">Hawthorne&nbsp;Media&nbsp;Labs</H1>
+                </div>
+                <div class="col-5"></div>
+            </div>
+            <div class="col-3">
+                <span class="fa fa-user fa-lg"></span> Stephen Kelley<br>
+                Role: Data Scientist<br>
+                Dataset: ClientA Q1
+            </div>
+        </div>
+        <div class="row rowheader">
+            <div class="col-12">
+                <span class="fa fa-home fa-lg"></span> <span class="fa fa-angle-right fa-lg"></span> experiment <span class="fa fa-angle-right fa-lg"></span> baseline attribution <span class="fa fa-angle-right fa-lg"></span> list
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container-fluid">
+    <div class="row row-content">
+        <div class="col-12">
+            <h2 class="text-center">Baseline Attributions</h2>
+            <div class="text-center">Dataset:</th><td><select name='DatasetSelect' id='DatasetSelect'><option value='26' selected>Client A Q1</option><option value='33' >Client B: Q2</option></select></div>
+            <div class="text-center"><a href="#">add baseline attribution</a></div>
+            <table border="1" cellpadding="10" class="mx-auto">
+                <tr>
+                    <th>id</th>
+                    <th>kpi</th>
+                    <th>Completed</th>
+                    <th>width</th>
+                    <th>Cut%</th>
+                    <th>Cut&nbsp;Width</th>
+                    <th>Offset</th>
+                    <th>Metric</th>
+                    <th>ClientCost/KPI</th>
+                    <th>Tags</th>
+                    <th>View</th>
+                    <th>Delete</th>
+                    <th><input type="submit" value="Compare" name="btnCompare" id='btnCompare' onclick="return clickedCompare()"></th>
+                    <th>Jupyter</th>
+                </tr>
+
+                <tr>
+                    <td data-toggle="tooltip" data-html="true" data-animation="true" title="kpi:&nbsp;visits<br>metric:&nbsp;costWeight<br>width:&nbsp;5<br>cutpercentile:&nbsp;10<br>percentilewidth:&nbsp;30<br>offset:&nbsp;0.0<br>fitOffset:&nbsp;False<br>removeBaselineNegatives:&nbsp;True<br>removeSubtractedNegatives:&nbsp;True<br>CPClientCost:&nbsp;49.418"
+                        data-template='<divclass="tooltip" role="tooltip"><div class="tooltip-inner" style="max-width:none; text-align:left;"></div></div>'>
+                        68
+                    </td>
+                    <td>visits</td>
+                    <td class="text-nowrap">01/11/2019 14:05</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>30</td>
+                    <td>0.000</td>
+                    <td>costWeight</td>
+                    <td>49.418</td>
+                    <td>production</td>
+                    <td class="text-nowrap"><a href="details/68">results </a>
+                        |<a href="trending/68"> baseline</a></td>
+                    <td><a href="delete/68">delete</a></td>
+                    <td><input type="checkbox" name="compare-68"/>
+                        <input type="radio" name="reference" id="reference" value="68"/></td>
+                    <td><a href="#" onclick="redirectToJupyter(68)">
+                        <img src="images/jupyter.ico" width="20px" height="20px"></a></td>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-toggle="tooltip" data-html="true" data-animation="true" title="kpi:&nbsp;kpi1<br>metric:&nbsp;costWeight<br>width:&nbsp;5<br>cutpercentile:&nbsp;10<br>percentilewidth:&nbsp;30<br>offset:&nbsp;0.0<br>fitOffset:&nbsp;False<br>removeBaselineNegatives:&nbsp;True<br>removeSubtractedNegatives:&nbsp;True<br>CPClientCost:&nbsp;135.803"
+                        data-template='<divclass="tooltip" role="tooltip"><div class="tooltip-inner" style="max-width:none; text-align:left;"></div></div>'>
+                        64
+                    </td>
+                    <td>kpi1</td>
+                    <td>01/11/2019 11:02</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>30</td>
+                    <td>0.000</td>
+                    <td>costWeight</td>
+                    <td>135.803</td>
+                    <td>temporary</td>
+                    <td class="text-nowrap"><a href="details/64">results&nbsp;</a>
+                        |<a href="trending/64">&nbsp;baseline</a></td>
+                    <td><a href="delete/64">delete</a></td>
+                    <td><input type="checkbox" name="compare-64"/>
+                        <input type="radio" name="reference" id="reference" value="64"/></td>
+                    <td><a href="#" onclick="redirectToJupyter(64)">
+                        <img src="images/jupyter.ico" width="20px" height="20px"></a></td>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <hr>
+    <div class="row justify-content-center">
+        <p>Copyright Hawthorne 2018&nbsp;&nbsp;System: Production</p>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
